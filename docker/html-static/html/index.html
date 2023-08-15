@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop - Docker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                },
+            }
+        }
+    </script>
+</head>
+<body class="dark:bg-black dark:text-white">
+<div class="container max-w-3xl p-12">
+    <div class="flex flex-col gap-8">
+        <h1 class="text-2xl text-center">Turbinando a Eficiência dos seus Apps no Cloud</h1>
+        <div class="flex flex-col gap-6 text-justify">
+            <p>
+                É um grande desafio garantir uma boa performance no ambiente de Cloud. São tantas ferramentas e opções
+                que muitas vezes nos sentimos perdidos e não sabemos o que é melhor para cada situação. Neste rápido
+                workshop, vamos falar sobre as melhores práticas com Docker para otimizar sua aplicação. Abordaremos
+                técnicas para criar imagens Docker eficientes e reduzir o tempo de inicialização dos contêineres.
+            </p>
+            <p>
+                Também vamos conversar sobre como escalar e monitorar as aplicações. A escalabilidade é essencial para
+                lidar
+                com picos de tráfego e garantir que sua aplicação possa crescer conforme a demanda. Exploraremos como
+                utilizar o Kubernetes para escalonar automaticamente os contêineres com base nas métricas de carga e
+                desempenho.
+
+            </p>
+            <p>
+                Além da aplicação em si, também abordaremos diferenças entre utilizar servidores bare-metal e máquinas
+                virtuais. Bare-metal é quando utilizamos as máquinas diretamente, aproveitando o acesso direto aos
+                recursos
+                físicos, enquanto as máquinas virtuais oferecem uma camada adicional de virtualização.
+
+            </p>
+            <p>
+                Hoje, a maioria dos produtos dos grandes provedores de Cloud oferece apenas máquinas virtuais. Vamos te
+                explicar por que essa escolha pode limitar o desempenho da sua aplicação e como mitigar os impactos por
+                meio
+                de ajustes e otimizações específicas.
+            </p>
+            <p>
+                E de bônus, vamos te apresentar um pouco do zCloud, que é uma plataforma que implementa tudo que será
+                abordado nesse workshop e que você consegue usar apenas definindo o seu Dockerfile. O zCloud é uma
+                solução
+                completa para implementar e gerenciar aplicações Docker de maneira eficiente e escalável. Ele automatiza
+                muitas das tarefas complexas relacionadas ao uso do contêineres em um ambiente de nuvem, permitindo que
+                você
+                se concentre no desenvolvimento da sua aplicação.
+            </p>
+            <p>
+                Após esse workshop será o momento de você praticar. Não tem como absorver tudo isso sem colocar a mão na
+                massa. Com sua própria experiência aí chegará a hora de decidir se quer manter essa infraestrutura por
+                conta
+                própria ou se prefere delegar para uma solução completa como o zCloud.
+            </p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img class="w-32" alt="zCloud"
+                 src="https://zcloud-static-assets.s3.amazonaws.com/zcloud-images/zcloud-logo.svg"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
