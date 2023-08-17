@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+export KUBECONFIG=$PWD/kubeconf/k3s.yaml
+
+function dash_token() {
+    # Gerar token de baixa duração para acesso ao dashboard
+    kubectl -n kubernetes-dashboard create token admin-user --duration 15m
+}

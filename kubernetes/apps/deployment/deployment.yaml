@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-app
+spec:
+  selector:
+    matchLabels:
+      app: spring-boot-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: spring-boot-app
+    spec:
+      containers:
+        - name: spring-boot-app
+          image: zcloudws/zcloud-br-workshop-2023-08:java-big-layers-multi
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64M
+            limits:
+              cpu: 300m
+              memory: 450M
+          livenessProbe:
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+            httpGet:
+              path: /
+              port: 8080
+              scheme: HTTP
+          readinessProbe:
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+            httpGet:
+              path: /
+              port: 8080
+              scheme: HTTP
